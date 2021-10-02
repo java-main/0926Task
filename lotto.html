@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호</title>
+</head>
+<body>
+        <h2>로또번호 뽑기 게임 </h2>
+        <script>
+            'use strict'
+            
+            let lotto = [];
+            for(let i = 0 ; i <= 6 ; i++){
+                let first1 = Math.floor (Math.random()*(46-1)+1);
+               if(lotto.indexOf(first1) === -1){
+                lotto.push(first1)
+               }else{
+                   i--
+               }
+            }
+            lotto.sort()
+            console.log(`오늘의 예측 로또번호`)
+            console.log(`[ ${lotto[0]},${lotto[1]} ,${lotto[2]} ,${lotto[3]} ,${lotto[4]} ,${lotto[5]}]`)
+
+        </script>
+</body>
+</html>
