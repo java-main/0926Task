@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤게임</title>
+</head>
+<body>
+    <script>
+        'user strict'
+        
+        while(true){
+            const data = Math.floor (Math.random() * (7-1)+1);
+            const select = Number(prompt('주사위 숫자를 맞춰보세요(1~6)'));
+                if(select != data){
+                  alert(`정답은 ${data}입니다. 틀렸습니다.`);
+                }
+                else if(select == data){
+                 alert(`정답은 ${data}입니다. 맞췄습니다. 짝짝짝!`);
+                 alert(`게임을 종료합니다.`); 
+                 break;
+                }
+            }
+    </script>
+</body>
+</html>
